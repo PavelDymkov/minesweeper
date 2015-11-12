@@ -1,0 +1,117 @@
+width = 18px
+height = 18px
+
+
+.minesweeper-main_screen
+	position relative
+	height 250px
+
+.minesweeper-game_screen
+	display flex
+	flex-flow column wrap
+	align-items center
+	padding 0 12px
+
+.minesweeper-game
+	position relative
+	margin-top 12px
+
+.minesweeper-game_info
+	margin-top 12px
+
+
+.minesweeper-battlefield
+	display flex
+	flex-wrap wrap
+
+.minesweeper-cell
+	display flex
+	justify-content center
+	align-content center
+	width width
+	height height
+	background-color SkyBlue
+	border 1px solid black
+	border-radius 1px
+
+.minesweeper-cell span
+	line-height height
+
+.minesweeper-hovered
+	background-color LightBlue
+
+.minesweeper-marked
+	background-color DeepSkyBlue
+
+.minesweeper-undermined
+	background-color red
+	
+.minesweeper-checked
+	background-color White
+
+.minesweeper-empty_cell
+	width width
+	height height
+
+.minesweeper-one_mine_arround
+	color Blue
+
+.minesweeper-two_mines_arround
+	color Green
+
+.minesweeper-three_mines_arround
+	color DarkRed
+
+.minesweeper-four_mines_arround
+	color DarkBlue
+
+.minesweeper-five_mines_arround
+	color DarkRed
+
+.minesweeper-six_mines_arround
+	color DarkCyan
+
+.minesweeper-seven_mines_arround
+	color Purple
+
+.minesweeper-eight_mines_arround
+	color Black
+
+
+.minesweeper-button
+	display inline-flex
+	width 200px
+	height 32px
+	margin 8px 0
+	border black 2px solid
+	justify-content center
+	align-items center
+
+
+.minesweeper-horizontal_layout
+	display flex
+	flex-direction row-reverse
+	justify-content space-between
+	width: 100%
+
+.minesweeper-vertical_layout
+	display flex
+	width 100%
+	height 100%
+	flex-flow column wrap
+	justify-content center
+	align-items center
+
+.minesweeper-gameover_layout
+	position absolute
+	left 0px
+	top 0px
+	display flex
+	justify-content center
+	align-items center
+
+.minesweeper-gameover_text
+	font-size 36px
+	font-weight bolder
+	color #070707
+	opacity 0.5

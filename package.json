@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "gulp-browserify": "*",
+    "gulp-rename": "*",
+    "gulp-stylus": "*",
+    "gulp-plumber": "*",
+    "babel": "*",
+    "babelify": "*"
+  }
+}
