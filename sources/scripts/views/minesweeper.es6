@@ -14,10 +14,21 @@ export class Minesweeper extends ControllerView {
 			onMouseDown: this.preventDefault,
 			onContextMenu: this.preventDefault
 		};
+
+		this.linkProps = {
+			href: "https://github.com/PavelDymkov/minesweeper",
+			target: "_blank",
+			onMouseDown: this.stopPropagation,
+			onContextMenu: this.stopPropagation
+		};
 	}
 
 	preventDefault(event) {
 		event.preventDefault();
+	}
+
+	stopPropagation(event) {
+		event.stopPropagation();
 	}
 
 	render() {
@@ -40,8 +51,8 @@ export class Minesweeper extends ControllerView {
 		return <div className={ ClassList.APPLICATION } { ...this.handlers }>
 			{ content }
 
-			<div className={ ClassList.SOURCE_LINK }>
-				<a href="https://github.com/PavelDymkov/minesweeper">
+			<div className={ ClassList.SOURCE_LINK } { ...this.linkHandlers }>
+				<a { ...this.linkProps }>
 					Исходный код игры
 				</a>
 			</div>

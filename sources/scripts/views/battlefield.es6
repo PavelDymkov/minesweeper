@@ -45,13 +45,7 @@ const MarkedState =
 		MARKED_AREA
 	`
 
-let idTemplate = ["cell_", null, "_", null];
-let generateCellId = (row, column) => {
-	idTemplate[1] = row;
-	idTemplate[3] = column;
-
-	return idTemplate.join("");
-};
+let generateCellId = (row, column) => `cell_${ row }_${ column }`;
 
 
 export class Battlefield extends ControllerView {
