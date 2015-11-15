@@ -1,6 +1,7 @@
 export default Object.freeze({
-	MAIN_SCREEN: "minesweeper-main_screen",
-	GAME_SCREEN: "minesweeper-game_screen",
+	APPLICATION: "minesweeper-app_container",
+	MENU_LAYOUT: "minesweeper-menu_layout",
+	GAME_LAYOUT: "minesweeper-game_layout",
 	GAME: "minesweeper-game",
 	GAME_INFO: "minesweeper-game_info",
 	BATTLEFIELD: "minesweeper-battlefield",
@@ -22,5 +23,7 @@ export default Object.freeze({
 	HORIZONTAL_LAYOUT: "minesweeper-horizontal_layout",
 	VERTICAL_LAYOUT: "minesweeper-vertical_layout",
 	GAMEOVER_LAYOUT: "minesweeper-gameover_layout",
-	GAMEOVER_TEXT: "minesweeper-gameover_text"
+	GAMEOVER_TEXT: "minesweeper-gameover_text",
+	TOUCH_DEVICE_LAYOUT: "minesweeper-touch_device_layout",
+	SOURCE_LINK: "minesweeper-source_link"
 });

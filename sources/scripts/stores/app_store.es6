@@ -10,7 +10,8 @@ class AppStoreClass extends Store {
 		super();
 
 		this.payload = {
-			screen: Screens.MAIN,
+			layout: "ontouchstart" in document ?
+				Layouts.TOUCH_DEVICE : Layouts.MENU,
 			difficult: null,
 			gameInProcess: false
 		};
@@ -21,18 +22,18 @@ class AppStoreClass extends Store {
 
 		switch (action.type) {
 			case appActions.START_GAME:
-				this.payload.screen = Screens.GAME;
+				this.payload.layout = Layouts.GAME;
 				this.payload.difficult = action.difficult;
 				this.payload.gameInProcess = true;
 				break;
 
 			case appActions.CONTINUE_GAME:
-				this.payload.screen = Screens.GAME;
+				this.payload.layout = Layouts.GAME;
 				this.payload.gameInProcess = true;
 				break;
 			
 			case appActions.TO_MAIN_MENU:
-				this.payload.screen = Screens.MAIN;
+				this.payload.layout = Layouts.MENU;
 				break;
 			
 			case gameplayActions.CHECK_CELL:
@@ -52,6 +53,6 @@ class AppStoreClass extends Store {
 }
 
 
-export const Screens = Enum `MAIN, GAME`
+export const Layouts = Enum `MENU, GAME, TOUCH_DEVICE`
 
 export const appStore = new AppStoreClass;

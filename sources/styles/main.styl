@@ -2,15 +2,22 @@ width = 18px
 height = 18px
 
 
-.minesweeper-main_screen
-	position relative
+.minesweeper-app_container
+	display flex
+	flex-flow column wrap
+	justify-content space-between
+	align-items center
+	height 100%
+	padding: 0 12px;
+
+.minesweeper-menu_layout
 	height 250px
 
-.minesweeper-game_screen
+.minesweeper-game_layout
 	display flex
 	flex-flow column wrap
 	align-items center
-	padding 0 12px
+	width 100%
 
 .minesweeper-game
 	position relative
@@ -33,6 +40,7 @@ height = 18px
 	background-color SkyBlue
 	border 1px solid black
 	border-radius 1px
+	cursor default
 
 .minesweeper-cell span
 	line-height height
@@ -44,7 +52,7 @@ height = 18px
 	background-color DeepSkyBlue
 
 .minesweeper-undermined
-	background-color red
+	background-color Red
 	
 .minesweeper-checked
 	background-color White
@@ -86,6 +94,7 @@ height = 18px
 	border black 2px solid
 	justify-content center
 	align-items center
+	cursor pointer
 
 
 .minesweeper-horizontal_layout
@@ -115,3 +124,9 @@ height = 18px
 	font-weight bolder
 	color #070707
 	opacity 0.5
+
+.minesweeper-touch_device_layout
+	margin 12px
+
+.minesweeper-source_link
+	padding 12px

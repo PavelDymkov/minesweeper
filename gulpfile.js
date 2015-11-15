@@ -5,8 +5,9 @@ var stylus = require("gulp-stylus");
 var plumber = require("gulp-plumber");
 var Server = require("light-server");
 
+
 gulp.task("scripts-compiler", function() {
-    return gulp.src("sources/scripts/application.es6", { read: false })
+    gulp.src("sources/scripts/application.es6", { read: false })
     	.pipe(plumber())
 		.pipe(browserify({
 			transform: ["babelify"],
@@ -18,8 +19,8 @@ gulp.task("scripts-compiler", function() {
 
 gulp.task("styles-compiler", function() {
 	gulp.src("sources/styles/main.styl")
-	    .pipe(stylus())
-	    .pipe(rename("minesweeper.css"))
+		.pipe(stylus())
+		.pipe(rename("minesweeper.css"))
 		.pipe(gulp.dest("public/css/"));
 });
 

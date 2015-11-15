@@ -1,7 +1,9 @@
 import ControllerView from "../libs/controller-view.es6";
-import { appStore, Screens } from "../stores/app_store.es6";
-import { MainScreen } from "./main_screen.es6";
-import { GameScreen } from "./game_screen.es6";
+import { appStore, Layouts } from "../stores/app_store.es6";
+import { MenuLayout } from "./menu_layout.es6";
+import { GameLayout } from "./game_layout.es6";
+import { TouchDeviceLayout } from "./touch_device_layout.es6";
+import ClassList from "../libs/css-class-list.es6";
 
 
 export class Minesweeper extends ControllerView {
@@ -21,18 +23,28 @@ export class Minesweeper extends ControllerView {
 	render() {
 		let content = null;
 
-		switch (this.state.screen) {
-			case Screens.MAIN:
-				content = <MainScreen resumable={ this.state.gameInProcess } />
+		switch (this.state.layout) {
+			case Layouts.MENU:
+				content = <MenuLayout resumable={ this.state.gameInProcess } />
 				break;
 
-			case Screens.GAME:
-				content = <GameScreen />
+			case Layouts.GAME:
+				content = <GameLayout />
+				break;
+
+			case Layouts.TOUCH_DEVICE:
+				content = <TouchDeviceLayout />
 				break;
 		}
 
-		return <div { ...this.handlers }>
+		return <div className={ ClassList.APPLICATION } { ...this.handlers }>
 			{ content }
+
+			<div className={ ClassList.SOURCE_LINK }>
+				<a href="https://github.com/PavelDymkov/minesweeper">
+					Исходный код игры
+				</a>
+			</div>
 		</div>
 	}
 }
