@@ -4,11 +4,11 @@ import getUUID from "./uuid.es6";
 export default function Enum(template) {
 	let [string] = template;
 	let keys = string.trim().split(separator);
-	let types = Object.create(null);
+	let enumeration = Object.create(null);
 
-	keys.forEach(fill, types);
+	keys.forEach(fill, enumeration);
 
-	return Object.freeze(types);
+	return Object.freeze(enumeration);
 };
 
 let separator = /\s+|(\s*,\s*)/;
