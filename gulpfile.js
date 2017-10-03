@@ -40,6 +40,8 @@ gulp.task("default", ["scripts-compiler", "styles-compiler"], function() {
 	server.start();
 });
 
+gulp.task("build", ["scripts-compiler", "styles-compiler"]);
+
 gulp.task("dev", ["scripts-compiler", "styles-compiler", "dev-server"], function() {
 	gulp.watch("sources/scripts/*.es6", ["scripts-compiler"]);
 	gulp.watch("sources/styles/*.styl", ["styles-compiler"]);

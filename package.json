@@ -12,6 +12,7 @@
   },
   "scripts": {
     "server": "gulp",
+    "build": "gulp build",
     "dev": "gulp dev",
     "start": "npm run server"
   },
