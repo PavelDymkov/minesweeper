@@ -1,4 +1,4 @@
-[Живой пример](https://googledrive.com/host/0B6M2mLCGoJelX0xhMU56VU1rbEU "Пример")
+[Живой пример](https://paveldymkov.github.io/minesweeper/ "Пример")
 
 Перед запуском необходимо выполнить
 
